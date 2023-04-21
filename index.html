@@ -8,273 +8,152 @@
     <title>Каталог</title>
   </head>
   <body>
-    <!-- Шапка -->
-    <header>
-      <div class="h-panel">
-        <a href="#"
-          ><img
-            src="img/icons/logo.svg"
-            alt="Логотип"
-            width="103.68"
-            height="26"
-        /></a>
-        <nav>
-          <a class="n-link" href="">Каталог</a>
-          <a class="n-link" href="#">Акции</a>
-          <a class="n-link" href="#">Доставка</a>
-          <a class="n-link" href="#">Контакты</a>
-        </nav>
-        <div class="h-icons">
-          <button class="btn-icon h-icons-icon" type="button">
-            <img
-              src="img/icons/search.svg"
-              alt="Поиск"
-              width="16"
-              height="16"
-            />
-          </button>
-          <a class="h-icons-icon" href="#"
-            ><img
-              src="img/icons/favourite.svg"
-              alt="Избранные"
-              width="16"
-              height="16"
-          /></a>
-          <a class="h-icons-icon" href="#"
-            ><img src="img/icons/basket.svg" alt="Корзина"
-          /></a>
-        </div>
-      </div>
+    <header class="container">
+      <nav>
+        <ul class="horizontal-list">
+          <li class="nav-logo">
+            <a href="#"
+              ><img
+                src="img/icons/logo.svg"
+                width="104"
+                height="26"
+                alt="Логотип"
+            /></a>
+          </li>
+          <li>
+            <a class="nav-link" href="">Каталог</a>
+            <a class="nav-link" href="#">Акции</a>
+            <a class="nav-link" href="#">Доставка</a>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+          <li>
+            <button class="btn-icon nav-icon" type="button">
+              <img
+                src="img/icons/search.svg"
+                alt="Поиск"
+                width="16"
+                height="16"
+              />
+            </button>
+            <a class="nav-icon" href="#"
+              ><img
+                src="img/icons/favourite.svg"
+                alt="Избранные"
+                width="16"
+                height="16"
+            /></a>
+            <a class="nav-icon" href="#"
+              ><img src="img/icons/basket.svg" alt="Корзина"
+            /></a>
+          </li>
+        </ul>
+      </nav>
       <div class="breadcrumbs">
         <a class="path-link" href="#">Главная</a>
-        <span class="path-link-next"
-          ><img
-            src="img/icons/next-path-link.svg"
-            alt="следущая стараница"
-            width="4"
-            height="7"
-        /></span>
         <a class="path-link" href="#">Каталог</a>
-        <span class="path-link-next"
-          ><img
-            src="img/icons/next-path-link.svg"
-            alt="следущая стараница"
-            width="4"
-            height="7"
-        /></span>
         <a class="path-link" href="#">Мужские часы</a>
       </div>
-      <section class="catalog-section">
+    </header>
+
+    <main class="container">
+      <div class="headline-catalog">
         <h2>Мужские часы</h2>
         <div class="sotring">
-          <p>Сортированить по:</p>
-          <!-- Поменятьна select -->
-          <button class="btn-drop-down-list" type="button">
-            <span class="sorting-criteria">популярности</span>
+          <span class="sorting__text">Сортированить по:</span>
+          <button class="sorting__btn-drop-down-list" type="button">
+            популярности
           </button>
         </div>
-      </section>
-    </header>
-    <!-- Главное -->
-    <main>
-      <!-- как назвать? -->
-      <section class="noname">
-        <form class="filters">В разработке</form>
-        <!-- Каталог часов -->
-        <section class="catalog-wrap">
-          <div class="card">
-            <p class="card__title">techne</p>
+      </div>
+      <section class="catalog">
+        <form class="catalog__filters">В разработке</form>
+        <section class="catalog__wrap">
+          <h2 class="hidden-text">Каталог</h2>
+          <section class="card" href="#">
+            <a class="card__title" href="#">techne</a>
             <p class="card__price">12 700</p>
             <img
               class="card__img"
-              src="img/watchs/watch_1.jpg"
+              src="img/watchs/watch_4.png"
               alt="Часы TECHNE"
               width="252"
               height="300"
             />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <!-- узнасть как ставиить цену -->
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <!-- узнасть как ставиить цену -->
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">techne</p>
-            <p class="card__price">12 700</p>
-            <img
-              class="card__img"
-              src="img/watchs/watch_1.jpg"
-              alt="Часы TECHNE"
-              width="252"
-              height="300"
-            />
-          </div>
+          </section>
         </section>
       </section>
+
       <div class="pagination">
-        <button class="bnt-paginarion" type="button">&lt;</button>
+        <button class="pagination__bnt bnt-transparent" type="button">
+          &lt;
+        </button>
         <a class="pagination__link" href="#">1</a>
         <a class="pagination__link" href="#">2</a>
         <a class="pagination__link" href="#">3</a>
-        <p>...</p>
+        <span>...</span>
         <a class="pagination__link" href="#">12</a>
-        <button class="bnt-paginarion" type="button">&gt;</button>
+        <button class="paginarion__bnt bnt-transparent" type="button">
+          &gt;
+        </button>
       </div>
+
       <div class="additional-section-catalog">
         <h2>Ремешки</h2>
+        <!-- как такое найменовать? -->
         <a class="a-bnt" href="#">Смотреть все</a>
       </div>
 
       <!-- Каталог ремешков -->
-      <section class="tape-wrap">
+
+      <section class="tape">
         <button class="bnt-tape" type="button">&lt;</button>
-        <div class="tape">
-          <div class="card">
-            <h2 class="card__title">GEORG JENSEN</h2>
-            <h2 class="card__price">6 500</h2>
-            <img
-              src="img/bands/band_1.jpg"
-              alt="Ремешок GEORG JENSEN"
-              width="360"
-              height="374"
-            />
-          </div>
-          <div class="card">
-            <p class="card__title">GEORG JENSEN</p>
-            <p class="card__price">6 500</p>
+        <section class="tape__wrap">
+          <section class="card" href="#">
+            <a class="card__title" href="#">techne</a>
+            <p class="card__price">12 700</p>
             <img
               class="card__img"
               src="img/bands/band_1.jpg"
-              alt="Ремешок GEORG JENSEN"
-              width="360"
-              height="374"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
             />
-          </div>
-          <div class="card">
-            <p class="card__title">GEORG JENSEN</p>
-            <p class="card__price">6 500</p>
-            <img
-              src="img/bands/band_1.jpg"
-              alt="Ремешок GEORG JENSEN"
-              width="360"
-              height="374"
-            />
-          </div>
-        </div>
+          </section>
+        </section>
         <button class="bnt-tape" type="button">&gt;</button>
       </section>
     </main>
     <!-- Подвал -->
     <footer>
-      <div class="f-menu">
-        <div class="f-menu__section">
-          <!-- скорее всего придется создавать class для лого заголовка, но наверное нет-->
-          <a href="#">
-            <img
-              src="img/icons/logo-footer.svg"
-              alt="Логотип"
-              width="130"
-              height="34.02"
-            />
-          </a>
-          <ul class="f-menu__list">
-            <li><a href="tel:84994504797">8 (499) 450-47-97</a></li>
-            <li>
-              <a href="mailto:info@conquest.watch.ru">info@conquest.watch.ru</a>
-            </li>
-          </ul>
-        </div>
-        <div class="f-menu__section">
-          <p class="f-menu__title">о компании</p>
-          <ul class="f-menu__list">
-            <li><a href="#">Наши магащины</a></li>
-            <li><a href="#">Вакансии</a></li>
-            <li><a href="#">Сертификаты</a></li>
-            <li><a href="#">Отзывы</a></li>
-          </ul>
-        </div>
-        <div class="f-menu__section">
-          <p class="f-menu__title">покупателям</p>
-          <ul class="f-menu__list">
-            <li><a href="#">Каталог товаров</a></li>
-            <li><a href="#">Как заказать?</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Корпоративным клиентам</a></li>
-          </ul>
-        </div>
-        <div class="f-menu__section">
-          <p class="f-menu__title">оплата и Доставка</p>
-          <ul class="f-menu__list">
-            <li><a href="#">Способы оплаты</a></li>
-            <li><a href="#">Время доставки</a></li>
-            <li><a href="#">Гарантиии и ремонт</a></li>
-            <li><a href="#">Возрат и компенсация</a></li>
-          </ul>
-        </div>
-      </div>
+      <section class="container">
+        <ul class="footer-menu">
+          <li>
+            <a href="#">
+              <img
+                src="img/icons/logo-footer.svg"
+                alt="Логотип"
+                width="130"
+                height="34"
+              />
+            </a>
+            <ul>
+              <li>asdfasdfas</li>
+              <li>asdfasdfas</li>
+            </ul>
+          </li>
+          <li>
+            <h2>Заголовок списка</h2>
+            <ul class="footer-menu__item">
+              <li><a href="#">Наши магащины</a></li>
+              <li><a href="#">Вакансии</a></li>
+              <li><a href="#">Сертификаты</a></li>
+              <li><a href="#">Отзывы</a></li>
+            </ul>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
     </footer>
   </body>
 </html>
