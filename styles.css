@@ -15,7 +15,88 @@ p {
   font-size: 14px;
 }
 
-.h-panel {
+.container {
+  margin: 0px auto;
+  width: 1366px;
+}
+
+ul.horizontal-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.horizontal-list li {
+  display: inline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555248;
+  margin: 0px 33px;
+}
+
+.nav-icon {
+  text-decoration: none;
+  color: #555248;
+  margin: 12px;
+}
+
+.path-link {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.path-link + .path-link::before {
+  content: url("img/icons/next-path-link.svg");
+  margin: 0px 14px;
+}
+
+.bnt-transparent {
+  background-color: transparent;
+  border: 0px;
+}
+
+.sotring__text {
+  font-size: 14px;
+}
+
+.sorting__btn-drop-down-list {
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.headline-catalog {
+  display: flex;
+}
+
+.catalog {
+  display: flex;
+}
+
+.catalog__filters {
+  width: 230px;
+}
+
+.catalog__wrap {
+  width: 836px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: right;
+}
+
+.pagination__link {
+  margin: 0 4px;
+}
+/* старое */
+
+/* .h-panel {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -38,24 +119,9 @@ p {
   margin: 0px 4px 0px 7.5px;
 }
 
-.h-panel + .breadcrumbs {
-  padding-top: 57px;
-  padding-left: 103px;
-}
-
 .catalog-section {
   display: flex;
   padding: 40px 102px 0px 101px;
-}
-
-.path-link {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-}
-
-.path-link-next {
-  margin: 0px 13px 0px 14px;
 }
 
 .sotring {
@@ -76,18 +142,18 @@ p {
 }
 
 /* как тут сделать через вектор? */
-.sorting-criteria::after {
+/* .sorting-criteria::after {
   margin-left: 9px;
   content: ">";
-}
+} */
 
 /* разделяет каталог и фильтры */
-.noname {
+/* .noname {
   display: flex;
   padding: 40px 103px 0px 103px;
-}
+} */
 
-.filters {
+/* .filters {
   width: 230px;
   margin-right: 93px;
 }
@@ -161,10 +227,10 @@ p {
   text-decoration: none;
   color: #444240;
   font-size: 16px;
-}
+} */
 
 /* скорее всего надо будет переделать */
-.a-bnt::after {
+/* .a-bnt::after {
   content: "";
   display: block;
   height: 1px;
@@ -215,4 +281,4 @@ p {
   text-decoration: none;
   color: #ffffff;
   font-size: 12px;
-}
+}  */ ;
