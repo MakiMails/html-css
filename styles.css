@@ -94,6 +94,13 @@ ul.horizontal-list li {
 .pagination__link {
   margin: 0 4px;
 }
+
+.bnt-watch-all {
+  /* тут еще надо стелизовать */
+  color: red;
+}
+
+/* ЭТО ДАЖЕ НЕ СТОИТ ТРОГАТЬ, ЕСЛИ СМОТРИТЕ МОЙ GIT */
 /* старое */
 
 /* .h-panel {
@@ -281,4 +288,4 @@ ul.horizontal-list li {
   text-decoration: none;
   color: #ffffff;
   font-size: 12px;
-}  */ ;
+}  */
