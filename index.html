@@ -27,7 +27,7 @@
             <a class="nav-link" href="#">Контакты</a>
           </li>
           <li>
-            <button class="btn-icon nav-icon" type="button">
+            <button class="bnt-transparent nav-icon" type="button">
               <img
                 src="img/icons/search.svg"
                 alt="Поиск"
@@ -51,26 +51,99 @@
       <div class="breadcrumbs">
         <a class="path-link" href="#">Главная</a>
         <a class="path-link" href="#">Каталог</a>
-        <a class="path-link" href="#">Мужские часы</a>
+        <a class="path-link path-link-current" href="#">Мужские часы</a>
       </div>
     </header>
 
     <main class="container">
       <div class="headline-catalog">
         <h2>Мужские часы</h2>
-        <div class="sotring">
-          <span class="sorting__text">Сортированить по:</span>
-          <button class="sorting__btn-drop-down-list" type="button">
-            популярности
-          </button>
+        <div class="sorting">
+          <p>Сортированить по:</p>
+          <select class="sorting__select">
+            <option>Тут варик</option>
+          </select>
         </div>
       </div>
       <section class="catalog">
-        <form class="catalog__filters">В разработке</form>
+        <h2 class="visually-hidden">Каталог</h2>
+        <form class="catalog__filters">
+          <div class="parameters-box">
+            <button class="bnt-disclosure" type="button">Стоймость<span>-<span></button>
+            <div class="range-price">
+              <div class="range-price__line"></div>
+              <div class="range-price__select-value"></div>
+            </div>
+          </div>
+          <div class="parameters-box">
+            <button class="bnt-disclosure" type="button">Стоймость<span>-<span></button>
+              <ul class="list-checkbox">
+                <li><input type="checkbox">Techne</input></li>
+                <li><input type="checkbox">Techne</input></li>
+                <li><input type="checkbox">Techne</input></li>
+                <li><input type="checkbox">Techne</input></li>
+                <li><input type="checkbox">Techne</input></li>
+                <li><input type="checkbox">Techne</input></li>
+              </ul>
+          </div>
+          <div class="parameters-box">
+            <button class="bnt-disclosure" type="button">Стоймость<span>+<span></button>
+          </div>
+          <div class="parameters-box">
+            <button class="bnt-disclosure" type="button">Стоймость<span>+<span></button>
+          </div>
+          <div class="parameters-box">
+            <button class="bnt-disclosure" type="button">Стоймость<span>+<span></button>
+          </div>
+          <button>Сбросить все фильтры</button>
+        </form>
         <section class="catalog__wrap">
-          <h2 class="hidden-text">Каталог</h2>
           <section class="card" href="#">
-            <a class="card__title" href="#">techne</a>
+            <a class="card__title" href="#">TECHNE</a>
+            <p class="card__price">12 700</p>
+            <img
+              class="card__img"
+              src="img/watchs/watch_4.png"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
+            />
+          </section>
+          <section class="card" href="#">
+            <a class="card__title" href="#">TECHNE</a>
+            <p class="card__price">12 700</p>
+            <img
+              class="card__img"
+              src="img/watchs/watch_4.png"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
+            />
+          </section>
+          <section class="card" href="#">
+            <a class="card__title" href="#">TECHNE</a>
+            <p class="card__price">12 700</p>
+            <img
+              class="card__img"
+              src="img/watchs/watch_4.png"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
+            />
+          </section>
+          <section class="card" href="#">
+            <a class="card__title" href="#">TECHNE</a>
+            <p class="card__price">12 700</p>
+            <img
+              class="card__img"
+              src="img/watchs/watch_4.png"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
+            />
+          </section>
+          <section class="card" href="#">
+            <a class="card__title" href="#">TECHNE</a>
             <p class="card__price">12 700</p>
             <img
               class="card__img"
@@ -89,7 +162,7 @@
         </button>
         <a class="pagination__link" href="#">1</a>
         <a class="pagination__link" href="#">2</a>
-        <a class="pagination__link" href="#">3</a>
+        <a class="pagination__link pagination__link-active" href="#">3</a>
         <span>...</span>
         <a class="pagination__link" href="#">12</a>
         <button class="paginarion__bnt bnt-transparent" type="button">
@@ -97,29 +170,55 @@
         </button>
       </div>
 
-      <h2>Ремешки</h2>
-      <!-- как такое найменовать? -->
-      <a class="bnt-watch-all" href="#">Смотреть все</a>
-
+      <section class="headline-catalog">
+        <h2>Ремешки</h2>
+        <a class="bnt-watch-all" href="#">Смотреть все</a>
+      </section>
       <!-- Каталог ремешков -->
 
       <section class="tape">
-        <button class="bnt-tape" type="button">&lt;</button>
+        <!-- <button class="bnt-tape" type="button">&lt;</button> -->
         <section class="tape__wrap">
           <!-- Карточка это section или же div -->
           <section class="card" href="#">
-            <a class="card__title" href="#">techne</a>
+            <a class="card__title" href="#">TECHNE</a>
             <p class="card__price">12 700</p>
             <img
               class="card__img"
-              src="img/bands/band_1.jpg"
+              src="img/watchs/watch_4.png"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
+            />
+          </section>
+          <section class="card" href="#">
+            <a class="card__title" href="#">TECHNE</a>
+            <p class="card__price">12 700</p>
+            <img
+              class="card__img"
+              src="img/watchs/watch_4.png"
+              alt="Часы TECHNE"
+              width="252"
+              height="300"
+            />
+          </section>
+          <section class="card" href="#">
+            <a class="card__title" href="#">TECHNE</a>
+            <p class="card__price">12 700</p>
+            <img
+              class="card__img"
+              src="img/watchs/watch_4.png"
               alt="Часы TECHNE"
               width="252"
               height="300"
             />
           </section>
         </section>
-        <button class="bnt-tape" type="button">&gt;</button>
+        <div class="tape__controls">
+          <button class="tape__controls-bnt-next">&gt;</button>
+          <button class="tape__controls-bnt-back">&gt;</button>
+        </div>
+        <!-- <button class="bnt-tape" type="button">&gt;</button> -->
       </section>
     </main>
     <!-- Подвал -->
@@ -135,7 +234,7 @@
                 height="34"
               />
             </a>
-            <ul>
+            <ul class="footer-menu__item">
               <li><a href="tel:84994504797">8 (499) 450-47-97</a></li>
               <li>
                 <a href="mailto:info@conquest.watch.tu"

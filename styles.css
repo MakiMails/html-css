@@ -15,9 +15,27 @@ p {
   font-size: 14px;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
 .container {
   margin: 0px auto;
-  width: 1366px;
+  width: 1160px;
 }
 
 ul.horizontal-list {
@@ -51,6 +69,10 @@ ul.horizontal-list li {
   margin: 0px;
 }
 
+.path-link-current {
+  color: #555248;
+}
+
 .path-link + .path-link::before {
   content: url("img/icons/next-path-link.svg");
   margin: 0px 14px;
@@ -74,16 +96,87 @@ ul.horizontal-list li {
   display: flex;
 }
 
-.catalog {
+.sorting {
   display: flex;
 }
 
+.sorting__select {
+  outline: none;
+  border: none;
+  appearance: url("img/icons/next-path-link.svg");
+}
+
+.headline-catalog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog__filters {
-  width: 230px;
+  border: none;
+  background-color: rebeccapurple;
+}
+
+.parameters-box {
+  background-color: darksalmon;
+}
+
+.bnt-disclosure {
+  display: block;
+  width: 100%;
+  text-align: start;
+  background-color: transparent;
+}
+
+.bnt-disclosure span {
+  justify-self: end;
+
+  /* тут остановился */
+}
+
+.range-price__line {
+  position: absolute;
 }
 
 .catalog__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+
   width: 836px;
+}
+
+.catalog__wrap > *:last-child {
+  margin-right: auto;
+}
+
+.card {
+  width: 252px;
+
+  background-color: #fdfdfb;
+}
+
+.card__title {
+  font-size: 14px;
+  text-decoration: none;
+
+  color: #444240;
+}
+
+.card__price {
+  font-size: 14px;
+  color: #636261;
+}
+
+.card__price::after {
+  margin-left: 8px;
+  content: "₽";
 }
 
 .pagination {
@@ -93,199 +186,65 @@ ul.horizontal-list li {
 
 .pagination__link {
   margin: 0 4px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #b6b6b6;
+}
+
+.pagination__link-active {
+  color: #1b1a17;
 }
 
 .bnt-watch-all {
-  /* тут еще надо стелизовать */
-  color: red;
-}
-
-/* ЭТО ДАЖЕ НЕ СТОИТ ТРОГАТЬ, ЕСЛИ СМОТРИТЕ МОЙ GIT */
-/* старое */
-
-/* .h-panel {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 28px 99px 0px 103px;
-}
-
-.n-link {
+  right: 0;
+  padding: 13px;
   text-decoration: none;
-  color: #555248;
-  margin: 0px 32.5px;
-}
-
-.btn-icon {
-  background-color: transparent;
-  border: none;
-  padding: 0px;
-}
-
-.h-icons-icon {
-  margin: 0px 4px 0px 7.5px;
-}
-
-.catalog-section {
-  display: flex;
-  padding: 40px 102px 0px 101px;
-}
-
-.sotring {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
-
-.btn-drop-down-list {
-  background-color: transparent;
-  border: none;
-  padding: 0px;
-}
-
-.sorting-criteria {
-  color: red;
-  margin-left: 9px;
-}
-
-/* как тут сделать через вектор? */
-/* .sorting-criteria::after {
-  margin-left: 9px;
-  content: ">";
-} */
-
-/* разделяет каталог и фильтры */
-/* .noname {
-  display: flex;
-  padding: 40px 103px 0px 103px;
-} */
-
-/* .filters {
-  width: 230px;
-  margin-right: 93px;
-}
-
-.catalog-wrap {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-}
-
-.card {
-  position: relative;
-  border: solid transparent;
-  margin-bottom: 42px;
-  line-height: 0px;
-}
-
-.card:hover {
-  border: dashed #bcbcbb;
-}
-
-.card__title {
-  position: absolute;
-  top: 19px;
-  left: 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-.card__price {
-  position: absolute;
-  top: 41px;
-  left: 20px;
-  font-size: 14px;
-}
-
-.card__price::after {
-  content: " ₽";
-}
-
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  padding-top: 10px;
-  padding-right: 101px;
-}
-
-.bnt-paginarion {
-  background-color: transparent;
-  border: none;
-  padding: 0px;
-  margin: 0px 10px;
-}
-
-.pagination__link {
-  text-decoration: none;
-  color: #b6b6b6;
-  font-size: 14px;
-  margin: 0px 4px;
-}
-
-.additional-section-catalog {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 78px 107px 0px 96px;
-}
-
-.a-bnt {
-  text-decoration: none;
-  color: #444240;
-  font-size: 16px;
-} */
-
-/* скорее всего надо будет переделать */
-/* .a-bnt::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: #c4c0b6;
-  width: auto;
-  margin: 12.5px 0px;
-}
-
-.tape-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 37.5px 47px 0px 56px;
-}
-
-.bnt-tape {
-  background-color: transparent;
-  border: none;
-  padding: 0px;
+  color: #1b1a17;
+  border-bottom: 1px solid #c4c0b6;
 }
 
 .tape {
-  display: flex;
-  flex-flow: wrap;
-  width: 100%;
-  justify-content: space-between;
-  margin: 0px 40px;
+  position: relative;
 }
 
-.f-menu {
+.tape__wrap {
   display: flex;
   justify-content: space-between;
-  padding: 79px 183px 67px 185px;
 }
 
-.f-menu__title {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 14px;
+.tape__controls {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-.f-menu__list {
+.tape__controls-bnt-next {
+  position: absolute;
+  bottom: 50%;
+  left: -40px;
+}
+
+.tape__controls-bnt-back {
+  position: absolute;
+  bottom: 50%;
+  right: -40px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
-  padding: 0px;
+  margin: 0;
 }
 
-.f-menu__list a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 12px;
-}  */
+.footer-menu h2 {
+  margin: 0;
+}
+
+.footer-menu__item {
+  list-style-type: none;
+}
+
+.footer-menu__item a {
+  color: rebeccapurple;
+}
