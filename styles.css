@@ -52,11 +52,13 @@ body {
 
 footer {
   background-color: #444240;
+  margin-top: 77px;
   padding-top: 82px;
   padding-bottom: 64px;
 }
 
 h2 {
+  margin: 0px;
   font-family: "PlayfairRegular";
   font-size: 32px;
 }
@@ -64,6 +66,11 @@ h2 {
 p {
   color: #bdb9b5;
   font-size: 14px;
+}
+
+nav {
+  margin: 0px;
+  margin-top: 28px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -119,22 +126,9 @@ ul.horizontal-list li {
   margin: 12px;
 }
 
-.ss {
-  display: flex;
-  position: relative;
-}
-
-.ss span {
-  position: absolute;
-  right: -5px;
-  top: -5px;
-  width: 13px;
-  height: 13px;
-  font-family: "RobotoRegular";
-  font-size: 8;
-  content: "1";
-  border-radius: 90px;
-  background-color: #e6c8b4;
+.breadcrumbs {
+  margin: 0px;
+  margin-top: 57px;
 }
 
 .path-link {
@@ -150,7 +144,7 @@ ul.horizontal-list li {
 }
 
 .path-link + .path-link::before {
-  content: url("img/icons/next-path-link.svg");
+  content: url("img/icons/arrow.svg");
   margin: 0px 14px;
 }
 
@@ -161,28 +155,34 @@ ul.horizontal-list li {
 
 .headline-catalog {
   display: flex;
+  margin: 0px;
+  margin-top: 40px;
+}
+
+.pagination + .headline-catalog {
+  margin-top: 76px;
 }
 
 .sorting {
   display: flex;
+}
 
+.sorting > p {
   font-family: "RobotoRegular";
   font-size: 14;
 }
 
 .sorting__select {
-  outline: none;
-  border: none;
-  appearance: url("img/icons/next-path-link.svg");
+  margin-left: 7px;
+  color: #1b1a17;
 }
 
-.sotring__text {
-  font-size: 14px;
-}
-
-.sorting__btn-drop-down-list {
-  font-size: 14px;
-  background-color: transparent;
+.sorting__select::after {
+  display: inline-block;
+  margin-left: 9px;
+  transform: rotate(90deg);
+  content: url("img/icons/arrow.svg");
+  stroke: red;
 }
 
 .headline-catalog {
@@ -194,6 +194,8 @@ ul.horizontal-list li {
 .catalog {
   display: flex;
   justify-content: space-between;
+  margin: 0px;
+  margin-top: 40px;
 }
 
 .catalog__filters {
@@ -205,10 +207,10 @@ ul.horizontal-list li {
   margin: 5px, 0px, 5px, 35px;
 }
 
-.filter summary {
+.filter > summary {
   position: relative;
 
-  margin-bottom: 27px;
+  margin-bottom: 20px;
 
   font-family: "RobotoMedium";
   font-size: 14px;
@@ -218,13 +220,17 @@ ul.horizontal-list li {
   cursor: pointer;
 }
 
-.filter summary:before {
+.filter > summary:before {
   position: absolute;
   content: "+";
   right: 0;
 }
 
-details[open] summary:before {
+.filter[open] > summary {
+  margin-bottom: 27px;
+}
+
+.filter[open] > summary:before {
   content: "–";
 }
 
@@ -233,7 +239,7 @@ details[open] summary:before {
   margin-bottom: 21px;
 }
 
-.filter__item input[type="checkbox"] {
+.filter__item > input[type="checkbox"] {
   position: absolute;
   align-items: center;
   margin: 0;
@@ -241,13 +247,13 @@ details[open] summary:before {
   z-index: 1;
 }
 
-.filter__item input[type="checkbox"] + label {
+.filter__item > input[type="checkbox"] + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
-.filter__item input[type="checkbox"] + label::before {
+.filter__item > input[type="checkbox"] + label::before {
   content: "";
   display: inline-block;
   width: 13px;
@@ -261,17 +267,26 @@ details[open] summary:before {
   background-size: 50% 50%;
 }
 
-.filter__item input[type="checkbox"]:checked + label::before {
+.filter__item > input[type="checkbox"]:checked + label::before {
   border-color: #909090;
   background-color: #909090;
   background-image: url("img/icons/check.svg");
   background-size: 12px;
 }
 
-.filter__item label {
+.filter__item > label {
   font-family: "RobotoRegular";
   font-size: 12px;
   color: #6f6e6d;
+}
+
+.catalog__filters-bnt {
+  width: 230px;
+  height: 60px;
+  margin: 5px, 0px;
+
+  border: 2px solid #e7e0cf;
+  background-color: #ffffff;
 }
 
 .bnt-disclosure {
@@ -300,32 +315,44 @@ details[open] summary:before {
 .catalog__wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
+  /* justify-content: space-between;
+  align-content: flex-start; */
 
-  width: 836px;
+  width: 842px;
 }
 
-.catalog__wrap > *:last-child {
-  margin-right: auto;
+.catalog__wrap .card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog__wrap .card:last-child(3) .card {
+  margin-bottom: 0px;
 }
 
 .card {
   position: relative;
   width: 252px;
+  margin-right: 40px;
 
-  background-color: #fdfdfb;
+  margin-bottom: 40px;
+  padding: 0;
+  border: 1px dashed transparent;
+}
+
+.card:hover {
+  border-color: #636261;
 }
 
 .card__heder {
   position: absolute;
+  margin: 20px;
 }
 
 .card__title {
-  display: block;
+  margin: 0;
   margin-bottom: 9px;
   font-family: "RobotoBold";
-  font-weight: bold;
+  font-size: 14px;
   text-decoration: none;
 
   color: #444240;
@@ -347,10 +374,16 @@ details[open] summary:before {
 .pagination {
   display: flex;
   justify-content: right;
+  margin-top: 8px;
+}
+
+.pagination__conteiner {
+  position: relative;
 }
 
 .pagination__link {
   margin: 0 4px;
+  font-family: "RobotoRegular";
   font-size: 14px;
   text-decoration: none;
   color: #b6b6b6;
@@ -358,6 +391,26 @@ details[open] summary:before {
 
 .pagination__link-active {
   color: #1b1a17;
+}
+
+.pagination__control {
+  display: inline;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__bnt {
+  position: absolute;
+  top: 2px;
+}
+
+.pagination__bnt-left {
+  left: -24px;
+}
+
+.pagination__bnt-right {
+  right: -24px;
 }
 
 .bnt-watch-all {
@@ -373,6 +426,7 @@ details[open] summary:before {
 
 .tape {
   position: relative;
+  margin-top: 53px;
 }
 
 .tape__wrap {
@@ -386,15 +440,23 @@ details[open] summary:before {
   padding: 0;
 }
 
-.tape__controls-bnt-next {
+.tape__controls-bnt {
   position: absolute;
-  bottom: 50%;
+  padding: 0;
+  top: 50%;
+  width: 12px;
+  height: 23px;
+}
+
+.tape__controls-bnt-left {
   left: -40px;
 }
 
-.tape__controls-bnt-back {
-  position: absolute;
-  bottom: 50%;
+.img-reverse {
+  transform: scaleX(-1);
+}
+
+.tape__controls-bnt-right {
   right: -40px;
 }
 
@@ -438,4 +500,21 @@ details[open] summary:before {
   font-size: 12px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
+}
+
+.block-line {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-icon-notification {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  text-align: center;
+  font-size: 8px;
+
+  border: 0px solid;
+  border-radius: 45px;
+  background: red;
 }
